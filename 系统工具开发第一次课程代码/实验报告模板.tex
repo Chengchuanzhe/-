@@ -1,0 +1,158 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage{color}
+\usepackage[UTF8]{ctex}
+
+\begin{document}
+    {\huge\title{实验报告}}
+    {\large\author{程传哲}}
+    \date{\today}
+    \maketitle
+\section{学习成果}
+
+\subsection{版本控制git}
+\begin{enumerate}
+  \item {\large git init NewDir} 
+    \begin{itemize}
+      \item 使用git init命令来初始化一个Git仓库 NewDir是想要建在的文件下的文件名
+    \end{itemize}
+  \item {\large git clone \textless url\textgreater [directory]}
+    \begin{itemize}
+      \item 使用git clone去git仓库拷贝项目，其中url为git仓库地址，directory为本地目录
+    \end{itemize}
+  \item {\large git config}
+    \begin{itemize}
+      \item 使用git config来配置用户名和邮箱地址例如git config global --user.name '程传哲'
+    \end{itemize}
+  \item{\large git add}
+    \begin{itemize}
+      \item 使用git add可以将工作区的文件放入暂存区中，例如git add file01.txt以及git add .可以将之前的所有未保存到暂存区的文件暂存
+    \end{itemize}
+  \item{\large git status}
+    \begin{itemize}
+      \item 使用git status可以去查看相关文件的状态
+    \end{itemize}
+  \item{\large git diff}
+    \begin{itemize}
+      \item 使用git diff查看相关文件的更新日志
+        \begin{itemize}
+          \item 查看已缓存的改动： git diff --cached
+          \item 查看已缓存的与未缓存的所有改动：git diff HEAD
+          \item 显示摘要而非整个 diff：git diff --stat
+        \end{itemize}
+    \end{itemize}
+  \item{\large git commit}
+    \begin{itemize}
+      \item 使用git commit可以将处于暂存区的文件放入仓库中，git commit -m '提交的注释' ，或者是未被放入暂存区的文件可以直接使用git commit -am '提交的注释'去将他放入到仓库中
+    \end{itemize}
+  \item{\large git reset HEAD}
+    \begin{itemize}
+      \item 使用git reset HEAD可以取消已经暂存的文件例如git reset HEAD file01.txt 
+    \end{itemize}
+  \item{\large git rm}
+    \begin{itemize}
+      \item 使用git rm一个删除命令
+        \begin{itemize}
+          \item git rm \textless file \textgreater 从已跟踪文件清单中移除
+          \item git rm -f \textless file \textgreater 是将修改并已经放入暂存区的文件移除
+          \item git rm cached \textless file \textgreater 把文件从暂存区域移除，但仍保留在当前工作目录
+          \item git rm –r * 删除整个子目录和文件（递归删除）
+        \end{itemize}
+    \end{itemize}
+  \item{\large git mv}
+    \begin{itemize}
+      \item git mv file01.txt file02.txt,所以git mv的功能是将一个文件移动或者重命名还包括目录和软链接
+    \end{itemize}
+  \item{\large git branch}
+    \begin{itemize}
+      \item 查看分支
+    \end{itemize}
+  \item{\large git branch (branchname)}
+    \begin{itemize}
+      \item 创建分支并命名
+    \end{itemize}
+  \item {\large git checkout (branchname)}
+    \begin{itemize}
+      \item 切换分支
+    \end{itemize}
+  \item{\large git branch -d (branchname)}
+    \begin{itemize}
+      \item 删除分支
+    \end{itemize}
+  \item{\large git log}
+    \begin{itemize}
+      \item 使用git log 查看更新的内容标签
+        \begin{itemize}
+          \item -pretty=oneline 简短内容
+          \item -reverse逆向查看
+          \item –author查找指定用户的提交日志
+          \item –since、–before、 --until、–after指定筛选日期
+        \end{itemize}
+    \end{itemize}
+\end{enumerate}
+\subsection{文档编写latex}
+\begin{enumerate}
+\item{\large 字体效果}
+  \begin{itemize}
+    \item 下划线
+    \begin{center}
+        \underline{underline,程传哲}
+    \end{center}
+    \item 字体改观
+    \begin{center}
+        \textit{impossibility}
+    \end{center}
+  \end{itemize}
+\item{\large 字体颜色}
+    \begin{itemize}
+      \item 普通改变颜色
+      \begin{center}
+        \item {\color{blue}CHENGCHUAZHE}
+      \end{center}
+      \item 改变字体背景颜色
+      \begin{center}
+        \item \colorbox{blue}{\color{yellow}CHENGCHUAZHE}
+      \end{center}
+    \end{itemize}
+\item{\large 表格}
+    \begin{itemize}
+      \item 示例一:
+      \begin{tabular}{|r|l|}
+        \hline
+        1   & math  \\
+        \hline 
+        12  & english  \\
+        \hline 
+      \end{tabular}
+      \item 示例二：
+      \begin{tabular}{rc|}
+      LATEX & latex \\
+      \cline{1-1}
+      CTEX  & ctex  \\
+      \hline
+      \end{tabular}
+    \end{itemize}
+\item {\large 数学公式}
+    \begin{itemize}
+        \item 示例一:\begin{equation}
+                a =  b + c \\ 
+              \end{equation}
+        \item 示例二：
+            \begin{equation}
+                \sum_{i=1}^5 y^z = \beta
+            \end{equation}
+    \end{itemize}
+\item {\large 特殊字符}
+    \begin{itemize}
+        \item \# \$ \% \^{} \& \_ \{ \} \~{}
+    \end{itemize}
+\end{enumerate}
+
+\section{Github链接}
+
+
+\section{学习感悟}
+    在本次的系统工具开发实践课中我受益颇多，有关于latex与git项目的学习也还会继续，在latex学习过程中愈发的明白这样一个排版工具对一个好的论文的重要性，latex的
+很多地方可以避免我们在使用word编写排版论文时候的出现的问题，比如字体，段落，符号等。在学习git中也弄清楚了基础指令的作用以及他们给我们带来的效果，以及git这样一个工具对项目开发的实际作用，版本更迭等。之宗旨学习了这么多知识后，会增加我们学习计算机课程的兴趣
+\end{document}
